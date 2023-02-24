@@ -1,4 +1,5 @@
 import os
+import logging
 
 from flask import Flask
 
@@ -10,4 +11,5 @@ def hello_world():
     return 'Hello {}!\n'.format(target)
 
 if __name__ == "__main__":
+    logging.error('{"key1":"val1"}')
     app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
